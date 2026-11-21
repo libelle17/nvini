@@ -12,8 +12,9 @@ set LOG=%TEMP%\NVIni_make.log
 set VB6=%ProgramFiles(x86)%\VS6\VB98\VB6.EXE
 if not exist "%VB6%" set VB6=%ProgramFiles(x86)%\Microsoft Visual Studio\VB98\VB6.EXE
 if not exist "%VB6%" set VB6=%ProgramFiles%\Microsoft Visual Studio\VB98\VB6.EXE
+if not exist "%VB6%" set VB6=%ProgramFiles(x86)%\VS\VB98\VB6.EXE
 if exist "%VB6%" goto vb6da
-echo Visual Basic 6 nicht gefunden (VS6\VB98 bzw. Microsoft Visual Studio\VB98 unter den Programmordnern)
+echo Visual Basic 6 nicht gefunden (VS6\VB98, Microsoft Visual Studio\VB98 bzw. VS\VB98 unter den Programmordnern)
 pause
 exit /b 1
 :vb6da
